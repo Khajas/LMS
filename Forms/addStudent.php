@@ -30,6 +30,8 @@
 				<option value="">--select--</option>
 				<! Fetch the values dynamically here depending on the sections of that standard>
 			</select>
+			<p>Password:<input type="password" name="passwd" size="30" /></p>
+			<p>Confirm password:<input type="password" name="c_passwd" size="30" /></p>
 			</p>
 			<p>	<input type = "submit" value = "Add Student" />
 				<input type = "reset" value = "Clear All" /></p>
@@ -39,19 +41,15 @@
 </html>
 
 <! TABLE STRUCTURE student
-sid VARCHAR(255) NOT NULL ,
-studentName VARCHAR(255),
-stuAddr1 VARCHAR(255),
-stuAddr2 VARCHAR(255),
-stuPhone INT(10), 
-branchId INT(4), 
-standard VARCHAR(255), 
-section VARCHAR(255),  
-PRIMARY KEY(sid), 
-FOREIGN KEY (standard,section) REFERENCES class(standard,section), 
-FOREIGN KEY (branchId) REFERENCES branch(branchId) );
-// Branch Id is hidden from the support specialist, so do we need to replace this with Institute name and branch Name ?
-// There is no password for students ?
-// How about globalizing the student id's ??
-// Where are we adding standards to a school?? and Sections to Standards ??
+Field 		Type 	Null 	Key 	Default 	Extra 	
+sid 		varchar(255) 	NO 		PRI 	NULL	
+usid 		varchar(255) 	YES 			NULL	
+studentName varchar(255) 	YES 			NULL	
+stuPassword varchar(255) 	YES 			NULL	
+stuAddr1 	varchar(255) 	YES 			NULL	
+stuAddr2 	varchar(255) 	YES 			NULL	
+stuPhone 	int(10)		 	YES 			NULL	
+branchId 	int(4) 			YES 	MUL		NULL	
+standard 	varchar(255) 	YES 	MUL 	NULL	
+section 	varchar(255) 	YES 			NULL	
 >

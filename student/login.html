@@ -1,0 +1,26 @@
+<! Programmer Khaja Anwar Ali siddiqui >
+<! Date Created: Jan 27, 2017>
+<! Last Modified: Jan 27, 2017>
+<! Purpose: Student Login interface >
+<html lang="en" dir="ltr">
+	<head>
+		<title>Student Login</title>
+	</head>
+	<body>
+		<p><h1> Student Portal</h1><p>
+		<fieldset>
+			<form name="login" action="s_ctrl.php" method="POST">
+				<p>Your ID:<input type="text" name="s_id" size="10"/></p>
+				<p>Password:<input type="password" name="passwd" size="10"/></p>
+				<input type="submit" value="Login"/>
+				<input type="reset" value="Clear"/>
+			</form>
+			<p> <h2>OR</p>
+			<form name="signup" action="../Forms/addStudent.php" method="POST">
+			<! Try to fetch the student id, and pass it to sign up form >
+				<input type="submit" value="Sign Up!"/>
+			</form>
+		</fieldset>
+		
+	</body>
+</html>
