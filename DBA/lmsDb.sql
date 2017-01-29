@@ -1,5 +1,8 @@
+ # AUTHOR: SHOAIB MOMIN
+  
+ # Last Modified : Jan 29,2017
 SET foreign_key_checks =0;
-Drop TABLE IF EXISTS institute, branch, employee, class, student, nonTeaching, teaching, classCourse, course, exam, studentExamGrade, teaches ;
+Drop TABLE IF EXISTS institute, branch, employee, class, student, nonTeaching, teaching, classCourse, course, exam, studentExamGrade, teaches, announcement ;
 create table institute(instituteId INT(4) NOT NULL AUTO_INCREMENT, instiName VARCHAR(255), PRIMARY KEY(instituteId));
 
 create table branch(branchId INT(4) NOT NULL AUTO_INCREMENT, instituteBranchId VARCHAR(255),branchName VARCHAR(255), branchAddr1 VARCHAR(255), branchAddr2 VARCHAR(255), phoneNum INT(10), instituteId INT(4), PRIMARY KEY (branchId), FOREIGN KEY (instituteId) REFERENCES institute(instituteId) );
