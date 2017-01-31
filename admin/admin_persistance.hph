@@ -1,0 +1,33 @@
+<?php
+class controller{
+	private $name;
+	private $id;
+	private $email;
+	private $type;
+	private $p_obj;
+	function init($new_name, $new_id, $new_email, $new_type){
+		$this->p_obj=new admin_presistance();
+		$this->name=$new_name; $this->id=$new_id; $this->email=$new_email; $this->type=$new_type;
+		echo $this->id;
+	}
+	function addEntry(){
+		if($this->type=="student"){
+			
+		}
+		else{
+	
+		}
+		// here insert the field into db
+	}
+	function sendEmail(){
+		echo "Please use the following link to register http://localhost/LMS/Forms/addStudent.php?id=$this->id";
+	}
+	
+	
+	
+	
+	function connect_local(){
+		
+	}
+}
+?>

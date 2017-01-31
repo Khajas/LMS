@@ -1,0 +1,22 @@
+<! Programmer Khaja Anwar Ali siddiqui >
+<! Date Created: Jan 30, 2017>
+<! Last Modified: Jan 30, 2017>
+<! Purpose: Confirm Registration for students and employees >
+<html lang="en" dir="ltr">
+	<head>
+		<title>Confirm Registration</title>
+	</head>
+	<body>
+		<p><h1>Confirm Registration</h1><p>
+		<fieldset>
+			<form name="new_registration" action="" method="POST">
+			<?php
+				include("NewRegistration.html");
+				echo "Name:";
+				echo $_POST['new_name'];
+			?>
+			</form>
+		</fieldset>
+		
+	</body>
+</html>

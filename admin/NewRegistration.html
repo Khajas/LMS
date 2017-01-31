@@ -1,0 +1,24 @@
+<! Programmer Khaja Anwar Ali siddiqui >
+<! Date Created: Jan 30, 2017>
+<! Last Modified: Jan 30, 2017>
+<! Purpose: New Registration for students and employees >
+<html lang="en" dir="ltr">
+	<head>
+		<title>New Registration</title>
+	</head>
+	<body>
+		<p><h1> New Registration</h1><p>
+		<fieldset>
+			<form name="new_registration" action="ConfirmNewRegistration.php" method="POST">
+				<p>Name:<input type="text" name="new_name" size="10"/></p>
+				<p>ID:<input type="text" name="new_id" size="10"/></p>
+				<p>Email:<input type="email" name="new_email" size="10"/></p>
+				<input type="radio" name="new_type" value="student" checked="checked">Student
+				<input type="radio" name="new_type" value="employee">Employee<br>
+				<input type="submit" value="Submit"/>
+				<input type="reset" value="Clear"/>
+			</form>
+		</fieldset>
+		
+	</body>
+</html>

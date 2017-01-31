@@ -10,7 +10,7 @@
 	<fieldset>
 		<form  name="addStudent" action="" method=""> <! You might see "?addStudent=" while submitting, 
 														because default method is GET >
-			<p>Student ID:<input type="text" name="sid" size="30" /></p>
+			<p>Student ID:<?php echo $_GET['id'] ?> </p>
 			<p>student Name:<input type="text" name="studentName" size="30" /></p>
 			<p>Address Line1 :<input type="text" name="stuAddr1" size="30" /></p>
 			<p>Address Line2 :<input type="text" name="stuAddr2" size="30" /></p>
