@@ -9,7 +9,7 @@ create table institute(instituteId INT(4) NOT NULL AUTO_INCREMENT, instiName VAR
 
 create table branch(branchId INT(4) NOT NULL AUTO_INCREMENT, instituteBranchId VARCHAR(255),branchName VARCHAR(255), branchAddr1 VARCHAR(255), branchAddr2 VARCHAR(255), phoneNum INT(10), instituteId INT(4), PRIMARY KEY (branchId), FOREIGN KEY (instituteId) REFERENCES institute(instituteId) );
 
-create table employee(empId VARCHAR(255) NOT NULL , ueid VARCHAR(255), empName VARCHAR(255), empPassword VARCHAR(255), empAddr1 VARCHAR(255), empAddr2 VARCHAR(255), empPhone INT(10), empEmail VARCHAR(255), empRole VARCHAR(255), salary DOUBLE(12,2), joinDate Date, branchId INT(4), PRIMARY KEY(empId), FOREIGN KEY (branchId) REFERENCES branch(branchId) ); 
+create table employee(empId VARCHAR(255) NOT NULL , ueid VARCHAR(255), empName VARCHAR(255), empPassword VARCHAR(255), empAddr1 VARCHAR(255), empAddr2 VARCHAR(255), empPhone INT(10), empEmail VARCHAR(255), empRole VARCHAR(255),  joinDate Date, branchId INT(4), PRIMARY KEY(empId), FOREIGN KEY (branchId) REFERENCES branch(branchId) ); 
 
 create table class(standard VARCHAR(255) NOT NULL, section VARCHAR(255) NOT NULL, academicYear VARCHAR(255) NOT NULL, branchId INT(4), PRIMARY KEY(standard,section,academicYear), FOREIGN KEY (branchId) REFERENCES branch(branchId) );
 
@@ -31,6 +31,4 @@ create table announcement(announceId INT(4) NOT NULL, announceTxt VARCHAR(255), 
 
 
 SET foreign_key_checks =1;
-
-
 
