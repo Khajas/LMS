@@ -14,12 +14,20 @@
 	<body>
 		<p><h1>Confirm Registration</h1><p>
 		<fieldset>
-			<form name="new_registration" action="admin_ctrl.php" method="POST">
+			<form name="new_registration" action="NewRegistration.html" method="">
 				<?php
-					echo "<p>Name: "; echo $_POST['new_name']; echo "</p>";
-					echo "<p>ID: "; echo $_POST['new_id']; echo "</p>";
-					echo "<p>Email: "; echo $_POST['new_email']; echo"</p>";
-					echo "<p>Type: "; echo $_POST['new_type']; echo"</p><br><br>";
+				include('admin_ctrl.php');
+				$name=$_POST['new_name'];
+				$id=$_POST['new_id'];
+				$email=$_POST['new_email'];
+				$type=$_POST['new_type'];
+					echo "<p>Name: "; echo $name; echo "</p>";
+					echo "<p>ID: "; echo $id; echo "</p>";
+					echo "<p>Email: "; echo $email; echo"</p>";
+					echo "<p>Type: "; echo $type; echo"</p><br><br>";
+					$obj_cntrl=new controller();
+					$obj_cntrl->init($name, $id, $email, $type);
+					$obj_cntrl->addEntry();
 				?>
 				<input type="submit" value="Confirm & notify"/>
 			</form>
