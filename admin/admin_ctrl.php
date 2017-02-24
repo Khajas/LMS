@@ -16,7 +16,7 @@ class controller{
 		$this->p_obj->addEntry($this->name, $this->id, $this->email, $this->type);
 	}
 	function sendEmail(){
-		$this->p_obj->sendEmail($this->id);
+		$this->p_obj->sendEmail($this->id, $this->type);
 	}
 }
 ?>

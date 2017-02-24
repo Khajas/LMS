@@ -28,6 +28,7 @@
 					$obj_cntrl=new controller();
 					$obj_cntrl->init($name, $id, $email, $type);
 					$obj_cntrl->addEntry();
+					$obj_cntrl -> sendEmail();
 				?>
 				<input type="submit" value="Confirm & notify"/>
 			</form>

@@ -3,17 +3,26 @@ class admin_persistance{
 	private $connection_pdo_local;
 	function addEntry($new_name, $new_id, $new_email, $new_type){
 		if($new_type=="student"){
-			$sql_st="insert into student(sid, studentName, studentEmail) values('$new_id', '$new_name', '$new_email')";
-			echo "\"insert into student(sid, studentName, studentEmail) values('$new_id', '$new_name', '$new_email')\";";
+			$sql_st="insert into student(sid, studentName, stuEmail) values('$new_id', '$new_name', '$new_email')";
+			echo "\"insert into student(sid, studentName, stuEmail) values('$new_id', '$new_name', '$new_email')\";";
 			$result=$this->connection_pdo_local->query($sql_st);
 		}
 		else{
+			$sql_st="insert into employee(empId, empName, empEmail) values('$new_id', '$new_name', '$new_email')";
+			echo "\"insert into employee(empId, empName, empEmail) values('$new_id', '$new_name', '$new_email')\";";
+			$result=$this->connection_pdo_local->query($sql_st);
 	
 		}
-		// here insert the field into db
+	
 	}
-	function sendEmail($new_id){
+	function sendEmail($new_id, $new_type){
+		
+		if($new_type =="student"){
 		echo "Please use the following link to register http://localhost/LMS/Forms/addStudent.php?id=$new_id";
+		}
+		else{
+		echo "Please use the following link to register http://localhost/LMS/Forms/addEmployee.php?id=$new_id";
+		}
 	}
 	function connect_local(){
 		$host = 'localhost';
