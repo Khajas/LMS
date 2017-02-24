@@ -18,7 +18,7 @@
 				<! Fetch the values dynamically here depending on the institute name>
 			</select>
 			</p>
-			<p>	<input type = "submit" value = "Add Employee" />
+			<p>	<input type = "submit" value = "Add Class" />
 				<input type = "reset" value = "Clear All" /></p>
 		</form>
 	</fieldset>
