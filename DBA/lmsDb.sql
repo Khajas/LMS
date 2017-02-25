@@ -23,7 +23,7 @@ create table course(courseId INT(4) NOT NULL AUTO_INCREMENT,standard VARCHAR(255
 
 create table exam(examId INT(4) NOT NULL AUTO_INCREMENT,standard VARCHAR(255) NOT NULL, section VARCHAR(255) NOT NULL, academicYear VARCHAR(255) NOT NULL, examName VARCHAR(255), examDate DATE, courseId INT(4), PRIMARY KEY(examId,examDate,courseId,standard,section,academicYear),  FOREIGN KEY (courseId,standard,section,academicYear) REFERENCES course(courseId,standard,section,academicYear) );
 
-create table studentExamGrade(sId VARCHAR(255) NOT NULL , examId INT(4) NOT NULL, examDate Date NOT NULL, grade VARCHAR(255), PRIMARY KEY(sId, examId, examDate), FOREIGN KEY (examId,examDate) REFERENCES exam(examId,examDate) , FOREIGN KEY (sId) REFERENCES student(sId)  );
+create table studentExamGrade(sId VARCHAR(255) NOT NULL , examId INT(4) NOT NULL, examDate Date NOT NULL, grade VARCHAR(255), courseId INT(4),standard VARCHAR(255),section VARCHAR(255), academicYear VARCHAR(255), PRIMARY KEY(sId, examId, examDate,courseId,standard,section,academicYear), FOREIGN KEY (examId,examDate,courseId,standard,section,academicYear) REFERENCES exam(examId,examDate,courseId,standard,section,academicYear) , FOREIGN KEY (sId) REFERENCES student(sId)  );
 
 create table teaches(empId VARCHAR(255) NOT NULL , courseId INT(4) NOT NULL,standard VARCHAR(255) NOT NULL, section VARCHAR(255) NOT NULL, academicYear VARCHAR(255) NOT NULL, PRIMARY KEY(empId, courseId,standard,section,academicYear), FOREIGN KEY (empId) REFERENCES employee(empId) , FOREIGN KEY (courseId,standard,section,academicYear) REFERENCES course(courseId,standard,section,academicYear)  );
 

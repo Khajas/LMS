@@ -4,10 +4,10 @@
 <! Last Modified: Jan 22, 2017>
 <html lang="en" dir="ltr">
 	<head>
-		<title>Add Course</title>
+		<title>Assign Course to a Class</title>
 	</head>
 	<body>
-	<p><h1>Add Course</h1></p>
+	<p><h1>Assign Course to a Class</h1></p>
 	<fieldset>
 		<form  name="addCourse" action="" method=""> <! You might see "?addCourse=" while submitting, 
 														because default method is GET >
