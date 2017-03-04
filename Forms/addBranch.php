@@ -16,11 +16,7 @@
 			<p>Address Line 1:<input type="text" name="instituteBranchId" size="30" /></p>
 			<p>Address Line 2:<input type="text" name="instituteBranchId" size="30" /></p>
 			<p>Phone Number:<input type="text" name="instituteBranchId" size="30" /></p>
-			<p>Institute ID:<select name="instituteId">
-				<option value="">--select--</option>
-				<! Fetch the values dynamically here >
-			</select>
-			</p>	
+			<!Fetch institute id from session variables>
 			<p>	<input type = "submit" value = "Add Branch" />
 				<input type = "reset" value = "Clear All" /></p>
 		</form>

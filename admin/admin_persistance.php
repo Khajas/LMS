@@ -3,8 +3,8 @@ class admin_persistance{
 	private $connection_pdo_local;
 	function addEntry($new_name, $new_id, $new_email, $new_type){
 		if($new_type=="student"){
-			$sql_st="insert into student(sid, studentName, studentEmail) values('$new_id', '$new_name', '$new_email')";
-			echo "\"insert into student(sid, studentName, studentEmail) values('$new_id', '$new_name', '$new_email')\";";
+			$sql_st="insert into student(sid, studentName, stuEmail) values('$new_id', '$new_name', '$new_email')";
+			echo "\"insert into student(sid, studentName, stuEmail) values('$new_id', '$new_name', '$new_email')\";";
 			$result=$this->connection_pdo_local->query($sql_st);
 		}
 		else{
@@ -32,12 +32,5 @@ class admin_persistance{
 			exit();
 		}
 	}
-	/*  public function getCustomer($cust_id){
-                        $sql_st="select * from customers where id=$cust_id;";
-                        $result_remote=$conn_remote->query($sql_st);
-                        $listDet=$result_remote->fetchAll();
-                        return $listDet;
-                }
-				*/
 }
 ?>
