@@ -14,7 +14,6 @@
 														because default method is GET >
 			<p>Employee ID:<input type="text" name="empId" size="30" /></p>
 			<p>Employee Name:<input type="text" name="empName" size="30" /></p>
-			<p>Salary :<input type="text" name="salary" size="30" /></p>
 			<p>Date of Joining:<input type="date" name="joinDate" size="30" /></p>
 			<p>Phone Number:<input type="tel" name="instituteBranchId" size="10" /></p>
 			<p>Institute Name:<select name="instituteName">
