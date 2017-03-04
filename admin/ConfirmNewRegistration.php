@@ -1,6 +1,6 @@
 <! Programmer Khaja Anwar Ali siddiqui >
 <! Date Created: Jan 30, 2017>
-<! Last Modified: Jan 30, 2017>
+<! Last Modified: March 4, 2017>
 <! Purpose: Confirm Registration for students and employees >
 <html lang="en" dir="ltr">
 	<head>
