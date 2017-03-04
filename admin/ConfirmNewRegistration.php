@@ -16,6 +16,7 @@
 		<fieldset>
 			<form name="new_registration" id="myId" action="confirmNewRegistration.php">
 				<?php
+<<<<<<< HEAD
 					if($_SERVER['REQUEST_METHOD']== "GET"){
 						goAhead($_GET['new_name'],$_GET['new_id'], $_GET['new_email'], $_GET['new_type']);
 					}else{
@@ -41,6 +42,21 @@
 						$obj_cntrl -> sendEmail();
 						header("Location: ./NewRegistration.html");
 					}	
+=======
+				include('admin_ctrl.php');
+				$name=$_POST['new_name'];
+				$id=$_POST['new_id'];
+				$email=$_POST['new_email'];
+				$type=$_POST['new_type'];
+					echo "<p>Name: "; echo $name; echo "</p>";
+					echo "<p>ID: "; echo $id; echo "</p>";
+					echo "<p>Email: "; echo $email; echo"</p>";
+					echo "<p>Type: "; echo $type; echo"</p><br><br>";
+					$obj_cntrl=new controller();
+					$obj_cntrl->init($name, $id, $email, $type);
+					$obj_cntrl->addEntry();
+					$obj_cntrl -> sendEmail();
+>>>>>>> origin/master
 				?>
 				<input type="submit" value="Confirm & notify"/>
 			</form>
