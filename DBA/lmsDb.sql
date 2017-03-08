@@ -11,7 +11,7 @@ create table branch(branchId INT(4) NOT NULL AUTO_INCREMENT, instituteBranchId V
 
 create table employee(empId VARCHAR(255) NOT NULL , ueid VARCHAR(255), empName VARCHAR(255), empPassword VARCHAR(255), empAddr1 VARCHAR(255), empAddr2 VARCHAR(255), empPhone INT(10), empEmail VARCHAR(255), empRole VARCHAR(255),  joinDate Date, branchId INT(4), PRIMARY KEY(empId), FOREIGN KEY (branchId) REFERENCES branch(branchId) ); 
 
-create table class(standard VARCHAR(255) NOT NULL, section VARCHAR(255) NOT NULL, academicYear VARCHAR(255) NOT NULL, branchId INT(4), PRIMARY KEY(standard,section,academicYear), FOREIGN KEY (branchId) REFERENCES branch(branchId) );
+create table class(standard VARCHAR(255) NOT NULL, section VARCHAR(255) NOT NULL, academicYear VARCHAR(255) NOT NULL, branchId INT(4), empId VARCHAR(255), PRIMARY KEY(standard,section,academicYear), FOREIGN KEY (branchId) REFERENCES branch(branchId), FOREIGN KEY(empId) REFERENCES employee(empId) );
 
 create table student(sid VARCHAR(255) NOT NULL , usid VARCHAR(255), studentName VARCHAR(255), stuPassword VARCHAR(255),  stuAddr1 VARCHAR(255), stuAddr2 VARCHAR(255), stuPhone INT(10),stuEmail VARCHAR(255),  branchId INT(4), standard VARCHAR(255), section VARCHAR(255),  PRIMARY KEY(sid), FOREIGN KEY (standard,section) REFERENCES class(standard,section), FOREIGN KEY (branchId) REFERENCES branch(branchId) );
 
